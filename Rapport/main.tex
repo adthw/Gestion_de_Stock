@@ -1,0 +1,126 @@
+\documentclass[french]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{natbib}
+\usepackage[vmargin=3cm,left=4cm,right=4cm]{geometry}
+
+\usepackage{babel}
+
+\usepackage{graphicx}
+\usepackage{caption} 
+\captionsetup{justification=centering}
+\usepackage{subcaption}
+% \usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
+
+% ################################
+% Package pour incorporer du code
+\usepackage{xcolor}
+\usepackage{listings}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{blue},
+    numberstyle=\color{codegray},
+    stringstyle=\color{orange},
+    basicstyle=\ttfamily\small, % \footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=10pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+}
+
+\lstset{style=mystyle}
+
+%##################################
+
+\begin{document}
+
+%###############################################
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+ 
+%----------------------------------------------------------------------------------------
+%	Section Titre
+%----------------------------------------------------------------------------------------
+\HRule \\[0.4cm]
+\vspace{1cm}
+{ \huge \bfseries Projet de Gestion de Stock}\\ % Title of your document
+\vspace{1cm}
+\HRule \\[1cm]
+ 
+%----------------------------------------------------------------------------------------
+%	Section auteur
+%----------------------------------------------------------------------------------------
+\vspace{1cm}
+
+\Large \today
+
+\vspace{3cm}
+
+\begin{minipage}{0.4\textwidth}
+\begin{center}
+\Large \textbf{Auteurs :}\\
+\vspace{0.5cm}
+????? \textsc{?????} \\
+????? \textsc{?????}\\
+Fabio \textsc{Cassiano}
+\end{center}
+\end{minipage}
+
+\vspace{5cm}
+
+\begin{figure}[!ht]
+    %\hspace*{-0.5cm}
+	\includegraphics[height=0.1\columnwidth]{Image/logo/logo_simplon.png}
+	\hspace*{0.5cm}
+	\includegraphics[height=0.12\columnwidth]{Image/logo/logo_Isen.png}
+	\hspace*{0.5cm}
+	\includegraphics[height=0.1\columnwidth]{Image/logo/logo_microsoft.jpg}
+\end{figure}
+
+\vfill
+
+\end{titlepage}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Dictionnaire des données}
+
+
+\section{Dépendances fonctionnelles}
+
+
+\section{Schéma entité-association}
+
+    
+\section{MLD}
+
+
+\section{Schéma de la base créer}
+
+\section{requête SQL}
+
+\begin{lstlisting}[language=sql]
+SELECT * FROM Stock "toto"
+\end{lstlisting}
+
+\end{document}
