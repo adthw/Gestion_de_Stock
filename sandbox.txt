@@ -1,8 +1,0 @@
-Produits (_id_produit_, ref_produit, nom_produit, description_produit, statut_produit)
-Commander (_#id_produit_, _#id_facture_, id_commander, quantite_commander)
-Factures (_id_facture_, numero_facture, #date_calendrier, #id_client)
-Produire (_#id_usine_, _#id_produit_)
-Usines (_id_usine_, nom_usine, adresse_usine, ville_usine)
-Calendrier (_date_calendrier_)
-Clients (_id_client_, nom_client, adresse_client, ville_client, pays_client, #id_types)
-Types (_id_types_, nom_types)
