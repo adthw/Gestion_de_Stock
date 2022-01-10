@@ -1,0 +1,22 @@
+%%mocodo
+:::
+Produits: id_produit, ref_produit, nom_produit, description_produit, statut_produit
+:
+Commander: #id_produit->Produits->id_produit, _#id_facture->Factures->id_facture, id_commander, quantite_commander
+:
+Factures: id_facture, numero_facture, date_calendrier, #id_client->Clients->id_client
+:::
+
+
+:::
+Produire: #id_usine->Usines->id_usine, _#id_produit->Produits->id_produit
+:::::::
+
+
+:
+Usines: id_usine, nom_usine, adresse_usine, ville_usine
+::
+Clients: id_client, nom_client, adresse_client, ville_client, pays_client, #id_types->Types->id_types
+:::
+Types: id_types, nom_types
+:

@@ -1,0 +1,14 @@
+Produits : id_produit[int(11)], ref_produit[VARCHAR(10)], nom_produit[VARCHAR(30)], description_produit[VARCHAR(500)], statut_produit[BOOL]
+Commander, 1N Produits, 1N Factures : id_commander[INT(11)], quantite_commander[INT(11)]
+Factures : id_facture[int(11)], numero_facture[VARCHAR(30)]
+
+Produire, 0N Usines, 1N Produits
+Dater, 11 Factures, 0N Calendrier
+Facturer, 11 Factures, 1N Clients
+
+Usines : id_usine[int(11)], nom_usine[VARCHAR(30)], adresse_usine[VARCHAR(30)], ville_usine[VARCHAR(30)]
+Calendrier : date_calendrier[DATE]
+Clients : id_client[int(11)], nom_client[VARCHAR(30)], adresse_client[VARCHAR(30)], ville_client[VARCHAR(30)], pays_client[VARCHAR(30)]
+Etre, 11 Clients, 1N Types
+Types : id_types[INT(11)], nom_types[VARCHAR(30)]
+
