@@ -34,6 +34,7 @@ INSERT INTO commander (id_produit, id_facture, quantite_commander) VALUES ((SELE
 
 -- • Retrouver tous les meubles achetés par le Bo Meuble de Paris: (clients, factures, calendrier)
 SELECT nom_client,ville_client, id_facture, nom_produit, ref_produit, quantite_commander FROM clients NATURAL JOIN factures NATURAL JOIN commander NATURAL JOIN produits WHERE nom_client='Bo Meuble' AND ville_client='Paris'
+SELECT nom_produit, quantite_commander FROM produits NATURAL JOIN commander NATURAL JOIN factures WHERE id_client= '1'
 
 -- • Retrouver toutes les factures enregistrées depuis le 1er juillet 2018:
 
