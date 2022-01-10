@@ -11,11 +11,11 @@ CREATE TABLE `PRODUITS` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `COMMANDER` (
+  `id_commander` INT(11),
   `id_produit` int(11),
   `id_facture` int(11),
-  `id_commander` INT(11),
   `quantite_commander` INT(11),
-  PRIMARY KEY (`id_produit`, `id_facture`)
+  PRIMARY KEY (`id_commander`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `FACTURES` (
@@ -27,9 +27,10 @@ CREATE TABLE `FACTURES` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `PRODUIRE` (
+  `id_produire` int(11),
   `id_usine` int(11),
   `id_produit` int(11),
-  PRIMARY KEY (`id_usine`, `id_produit`)
+  PRIMARY KEY (`id_produire`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `USINES` (
@@ -63,10 +64,11 @@ CREATE TABLE `TYPES` (
   PRIMARY KEY (`id_types`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-ALTER TABLE `COMMANDER` ADD FOREIGN KEY (`id_facture`) REFERENCES `FACTURES` (`id_facture`);
+-- ALTER TABLE `COMMANDER` ADD FOREIGN KEY (`id_facture`) REFERENCES `FACTURES` (`id_facture`);
 ALTER TABLE `COMMANDER` ADD FOREIGN KEY (`id_produit`) REFERENCES `PRODUITS` (`id_produit`);
 ALTER TABLE `FACTURES` ADD FOREIGN KEY (`id_client`) REFERENCES `CLIENTS` (`id_client`);
 ALTER TABLE `FACTURES` ADD FOREIGN KEY (`date_calendrier`) REFERENCES `CALENDRIER` (`date_calendrier`);
+ALTER TABLE `COMMANDER` ADD FOREIGN KEY (`id_facture`) REFERENCES `FACTURES` (`id_facture`);
 ALTER TABLE `PRODUIRE` ADD FOREIGN KEY (`id_produit`) REFERENCES `PRODUITS` (`id_produit`);
 ALTER TABLE `PRODUIRE` ADD FOREIGN KEY (`id_usine`) REFERENCES `USINES` (`id_usine`);
 ALTER TABLE `CLIENTS` ADD FOREIGN KEY (`id_types`) REFERENCES `TYPES` (`id_types`);
